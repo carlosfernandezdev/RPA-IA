@@ -1,0 +1,20 @@
+
+📊 *Resumen de Ventas* 📊
+
+✅ Total de ingresos por ventas: 487,261,584.28 soles
+✅ Ganancia estimada total: 239,501,456.68 soles
+
+🏢 Ventas por sede:
+Sede
+Ate                  8.161311e+07
+La Molina            3.981801e+07
+San Miguel           8.157220e+07
+Santiago de Surco    2.842583e+08
+
+⭐ Top 5 vendedores:
+Vendedor
+Norma Domínguez         1263
+Laura Alonso            1254
+Guillermina González    1241
+Sebastián Sánchez       1238
+Matias Pozo             1220
