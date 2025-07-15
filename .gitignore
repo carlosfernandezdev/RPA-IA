@@ -1,0 +1,25 @@
+# Ignora el archivo con credenciales de Twilio
+.env
+
+# Ignora entornos virtuales comunes
+venv/
+rpa-env/
+env/
+__pycache__/
+*.pyc
+
+# Archivos de Jupyter y VSCode
+.ipynb_checkpoints/
+.vscode/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de salida / gráficos
+*.png
+*.pdf
+*.svg
+*.jpg
+reporte.txt
+grafico_ventas.png

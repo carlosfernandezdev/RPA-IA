@@ -2,6 +2,15 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from twilio.rest import Client
+from dotenv import load_dotenv # type: ignore
+import os
+
+# === CARGAR VARIABLES DE ENTORNO ===
+load_dotenv()
+
+account_sid = os.getenv("TWILIO_ACCOUNT_SID")
+auth_token = os.getenv("TWILIO_AUTH_TOKEN")
+twilio_to = os.getenv("TWILIO_TO")
 
 # === CARGAR DATOS DE EXCEL ===
 df = pd.read_excel("Ventas - Fundamentos.xlsx", sheet_name="VENTAS", engine="openpyxl")
@@ -36,16 +45,12 @@ plt.savefig("grafico_ventas.png")
 plt.close()
 
 # === ENVIAR MENSAJE POR WHATSAPP (TWILIO) ===
-# Configura tus credenciales de Twilio
-account_sid = "AC2a2f7c814e463cd087b8487e80cf7318"
-auth_token = "fbb41bee678c6c391cbbb5aa54ef2e5c"
 client = Client(account_sid, auth_token)
 
-# Enviar reporte por WhatsApp
 message = client.messages.create(
     body=reporte,
     from_='whatsapp:+14155238886',
-    to='whatsapp:+584246608010'  # reemplaza con tu número verificado
+    to=twilio_to
 )
 
 print("Mensaje enviado con SID:", message.sid)
